@@ -1,5 +1,5 @@
 import 'package:bookme/constants.dart';
-import 'package:bookme/features/presentation/views/splash_view.dart';
+import 'package:bookme/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
