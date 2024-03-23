@@ -9,13 +9,13 @@ class ListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * .4, //width mt3l9 b height
       child: AspectRatio(
         //for responsive image
         aspectRatio: 1.4 / 2,
         child: Container(
           decoration: BoxDecoration(
-            // color: Colors.red,
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.red,
             image: DecorationImage(
               fit: BoxFit.fill,
               image: AssetImage(AssetsData.testImg),
