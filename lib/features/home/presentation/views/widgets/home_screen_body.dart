@@ -1,4 +1,5 @@
 import 'package:bookme/features/home/presentation/views/widgets/custom_app_bar.dart';
+import 'package:bookme/features/home/presentation/views/widgets/custom_listview_item.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -6,10 +7,12 @@ class HomeScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        CustomAppBar(),
+        const CustomAppBar(),
+        ListViewItem()
       ],
     );
   }
 }
+
