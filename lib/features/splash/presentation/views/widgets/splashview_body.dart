@@ -19,8 +19,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   void initState() {
-    InitSlideAnimation();
-    NavigateToHome();
+    super.initState();
+    initSlideAnimation();
+    navigateToHome();
   }
 
   @override
@@ -42,7 +43,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     );
   }
 
-  void InitSlideAnimation() {
+  void initSlideAnimation() {
     animationController =
         AnimationController(vsync: this, duration: const Duration(seconds: 1));
     slidinganimation =
@@ -51,10 +52,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
     animationController.forward();
   }
 
-  void NavigateToHome() {
+  void navigateToHome() {
     Future.delayed(
-      Duration(seconds: 1),
-      () => Get.to(Homescreen(),
+      const Duration(seconds: 1),
+      () => Get.to(const Homescreen(),
           transition: Transition.fade, duration: kTranstionduration),
     );
     super.initState();
