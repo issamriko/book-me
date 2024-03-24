@@ -18,7 +18,7 @@ class HomeScreenBody extends StatelessWidget {
           SizedBox(height: 50),
           Text(
             "Best seller",
-            style: Style.mediumFont,
+            style: Styles.mediumFont,
           ),
         ],
       ),
