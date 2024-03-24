@@ -1,5 +1,6 @@
+import 'package:bookme/core/utils/style.dart';
 import 'package:bookme/features/home/presentation/views/widgets/custom_app_bar.dart';
-import 'package:bookme/features/home/presentation/views/widgets/custom_listview_item.dart';
+import 'package:bookme/features/home/presentation/views/widgets/featured_booksListView.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -7,29 +8,19 @@ class HomeScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const CustomAppBar(),
-        FeaturedBooksListView(),
-      ],
-    );
-  }
-}
-
-class FeaturedBooksListView extends StatelessWidget {
-  const FeaturedBooksListView({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * .3,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return ListViewItem();
-        },
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 25),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CustomAppBar(),
+          FeaturedBooksListView(),
+          SizedBox(height: 50),
+          Text(
+            "Best seller",
+            style: Style.mediumFont,
+          ),
+        ],
       ),
     );
   }

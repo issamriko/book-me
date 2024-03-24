@@ -11,12 +11,13 @@ class ListViewItem extends StatelessWidget {
     return SizedBox(
       child: AspectRatio(
         //for responsive image
-        aspectRatio: 1.4 / 2,
+        aspectRatio: 1.5 / 2,
         child: Container(
+          margin: EdgeInsets.only(right: 15),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             color: Colors.red,
-            image: DecorationImage(
+            image: const DecorationImage(
               fit: BoxFit.fill,
               image: AssetImage(AssetsData.testImg),
             ),
